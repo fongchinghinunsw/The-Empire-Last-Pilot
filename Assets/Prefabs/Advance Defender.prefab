@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -663279274106779968}
   - component: {fileID: -1120363751065019540}
   - component: {fileID: 8536806818934150290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Advance Defender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +110,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1000
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  projectile: {fileID: 7920162658230273847, guid: af49dab037a1b1d46a6ca71c696f3d24, type: 3}
+  projectileSpeed: 10
 --- !u!58 &8536806818934150290
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class DamageDealer : MonoBehaviour
         return damage;
     }
 
-    public void OnControllerColliderHit(ControllerColliderHit hit)
+    public void Hit()
     {
         Destroy(gameObject);
     }

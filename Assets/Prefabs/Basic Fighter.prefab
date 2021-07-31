@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: -7480101035802526248}
   - component: {fileID: 6953212297383785570}
   - component: {fileID: 5782026898723829316}
+  - component: {fileID: -3207997031820688362}
+  - component: {fileID: -2598515927932111749}
   m_Layer: 9
   m_Name: Basic Fighter
   m_TagString: Untagged
@@ -115,6 +117,12 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   projectile: {fileID: 7920162658230273847, guid: af49dab037a1b1d46a6ca71c696f3d24, type: 3}
   projectileSpeed: 10
+  deathVFX: {fileID: 1224501537025733042, guid: 8f77835e3ac970a4ea12c707de86bbd1, type: 3}
+  durationOfExplosion: 1
+  deathSound: {fileID: 8300000, guid: 02d9c23254ff8d241a65051c15ebbef0, type: 3}
+  shootSound: {fileID: 8300000, guid: eee2e3bddebde8342ab6371936beba75, type: 3}
+  deathSoundVolume: 0.7
+  shootSoundVolume: 0.5
 --- !u!58 &5782026898723829316
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -125,9 +133,43 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.010149071, y: 0.07583454}
   serializedVersion: 2
   m_Radius: 0.3793803
+--- !u!50 &-3207997031820688362
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058915106646431888}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-2598515927932111749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058915106646431888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6c4a93734d428428a02bec14abc6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
